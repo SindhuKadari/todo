@@ -13,26 +13,64 @@
   }
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.todo-header h1 {
+  margin: 0;
+  font-size: 18px;
+}
+
+.todo-list {
+  padding: 20px;
+}
+
+.todo-item {
   display: flex;
-  flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  margin-bottom: 15px;
+  text-align: left;
+}
+
+.todo-item input[type="checkbox"] {
+  margin-right: 10px;
+  appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #b388ff;
+  border-radius: 50%;
+  outline: none;
+  cursor: pointer;
+}
+
+.todo-item input[type="checkbox"]:checked {
+  background-color: #b388ff;
+}
+
+.todo-item label {
+  flex-grow: 1;
+  color: #333;
+  cursor: pointer;
+}
+
+.todo-item.completed label {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.delete-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  color: #888;
+}
+
+.new-task-btn {
+  background-color: #b388ff;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  border: none;
+  padding: 10px 20px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 16px;
+  margin: 0 auto 20px;
+  display: block;
 }
