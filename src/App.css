@@ -1,76 +1,119 @@
+/* General App Styles */
 .App {
   text-align: center;
 }
 
 .App-logo {
-  height: 40vmin;
-  pointer-events: none;
+  height: 40vmin; /* Responsive sizing based on the viewport */
+  pointer-events: none; /* Prevent pointer events on the logo */
 }
 
+/* Animation for the App logo when motion is preferred */
 @media (prefers-reduced-motion: no-preference) {
   .App-logo {
-    animation: App-logo-spin infinite 20s linear;
+    animation: App-logo-spin infinite 20s linear; /* Add spinning animation */
   }
 }
 
+/* Header styles for the Todo List */
 .todo-header h1 {
-  margin: 0;
-  font-size: 18px;
+  margin: 0; /* Remove default margins */
+  font-size: 2rem; /* Use rem units for scaling */
+  color: #333; /* Make text color more readable */
 }
 
+/* Todo List Container */
 .todo-list {
-  padding: 20px;
+  padding: 20px; /* Padding around the list */
 }
 
+/* Todo Item Styles */
 .todo-item {
-  display: flex;
-  align-items: center;
-  margin-bottom: 15px;
-  text-align: left;
+  display: flex; /* Flexbox for item layout */
+  align-items: center; /* Center align items vertically */
+  margin-bottom: 15px; /* Space between items */
+  text-align: left; /* Left-align text */
+  transition: background-color 0.3s; /* Smooth background transition */
 }
 
+/* Checkbox Styles */
 .todo-item input[type="checkbox"] {
-  margin-right: 10px;
-  appearance: none;
-  width: 20px;
-  height: 20px;
-  border: 2px solid #b388ff;
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
+  margin-right: 10px; /* Space between checkbox and label */
+  appearance: none; /* Remove default checkbox appearance */
+  width: 20px; /* Set width */
+  height: 20px; /* Set height */
+  border: 2px solid #b388ff; /* Border styling */
+  border-radius: 50%; /* Make checkbox circular */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Change cursor on hover */
+  transition: background-color 0.3s, border-color 0.3s; /* Smooth transitions */
 }
 
+/* Checked state for checkbox */
 .todo-item input[type="checkbox"]:checked {
-  background-color: #b388ff;
+  background-color: #b388ff; /* Change background on check */
+  border-color: #6a2c91; /* Darker border when checked */
 }
 
+/* Label styles */
 .todo-item label {
-  flex-grow: 1;
-  color: #333;
-  cursor: pointer;
+  flex-grow: 1; /* Allow label to take up available space */
+  color: #333; /* Text color */
+  cursor: pointer; /* Change cursor on hover */
 }
 
+/* Completed Todo Item Styling */
 .todo-item.completed label {
-  text-decoration: line-through;
-  color: #888;
+  text-decoration: line-through; /* Strike-through for completed items */
+  color: #888; /* Gray color for completed */
 }
 
+/* Delete Button Styles */
 .delete-btn {
-  background: none;
-  border: none;
-  cursor: pointer;
-  font-size: 16px;
-  color: #888;
+  background: none; /* No background */
+  border: none; /* No border */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  color: #888; /* Color for delete button */
+  transition: color 0.3s; /* Smooth color transition */
 }
 
+/* Change color on hover */
+.delete-btn:hover {
+  color: #ff4d4d; /* Change color on hover */
+}
+
+/* New Task Button Styles */
 .new-task-btn {
-  background-color: #b388ff;
-  color: white;
-  border: none;
-  padding: 10px 20px;
-  border-radius: 20px;
-  cursor: pointer;
-  font-size: 16px;
-  margin: 0 auto 20px;
-  display: block;
+  background-color: #b388ff; /* Button color */
+  color: white; /* Text color */
+  border: none; /* No border */
+  padding: 10px 20px; /* Padding */
+  border-radius: 20px; /* Rounded corners */
+  cursor: pointer; /* Pointer cursor */
+  font-size: 1rem; /* Font size */
+  margin: 0 auto 20px; /* Centered with margin at the bottom */
+  display: block; /* Block display */
+  transition: background-color 0.3s; /* Smooth background transition */
+}
+
+/* Change background color on hover for new task button */
+.new-task-btn:hover {
+  background-color: #6a2c91; /* Darker shade on hover */
+}
+
+/* Responsive Design */
+@media (max-width: 600px) {
+  .todo-header h1 {
+    font-size: 1.5rem; /* Smaller font size for mobile */
+  }
+
+  .todo-item {
+    flex-direction: column; /* Stack items vertically on small screens */
+    align-items: flex-start; /* Align items to the start */
+  }
+
+  .new-task-btn {
+    width: 100%; /* Full width button on small screens */
+  }
 }
